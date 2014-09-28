@@ -1,15 +1,21 @@
 <div class="comment"> <!--Gets minimized class if we click [-] -->
-    <div class="commentHeader">
+    <div class="commentHeader clearfix">
         <span class="commentCollapser" onclick="commentFunctions.toggleComment(this)">[-]</span>
         <span class="commentUserName">{{userName}}</span>
                 <span class="commentScoring">
                     <span class="glyphicon glyphicon-thumbs-up upVote"></span>
                     <span class="score">{{score}}</span>
                     <span class="glyphicon glyphicon-thumbs-down downVote"></span>
-                    <span class="glyphicon glyphicon-edit"></span>
+                    <span class="glyphicon glyphicon-edit" onclick="commentFunctions.slideCommentBox(event)"></span>
                 </span>
     </div>
     <div class="commentBody">{{content}}</div>
+
+
     <div class="commentChildren">
+        <div class="comment leaveComment">
+            <textarea cols="30" rows="10">Well lets here it...</textarea>
+            <button onclick="commentFunctions.addComment(event, this)">Submit</button>
+        </div>
     </div>
 </div>

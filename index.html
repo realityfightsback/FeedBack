@@ -3,8 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="css/vendor/bootstrap-theme.css">
+    <!--<link rel="stylesheet" href="css/vendor/bootstrap-theme.css">-->
     <link rel="stylesheet" href="css/vendor/bootstrap.css">
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css"/>
+
     <link rel="stylesheet" href="css/drawer.css">
     <link rel="stylesheet" href="css/comments.css">
     <link rel="stylesheet" href="css/vendor/jquery-ui.css">
@@ -29,7 +33,7 @@
     </div>
     <div id="drawerBody">
         <div id="commentSection">
-            <button onclick="commentFunctions.getTemplate()">click</button>
+            <!--<button onclick="">click</button>-->
         </div>
         <div id="statsSection">
             Stats
@@ -63,15 +67,20 @@
 </div>
 
 <script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/constants.js"></script>
 <script type="text/javascript" src="js/drawer.js"></script>
 <script type="text/javascript" src="js/vendor/jquery-ui.js"></script>
 <script type="text/javascript" src="js/sampleJSON/getComments.js"></script>
 <script type="text/javascript" src="js/vendor/handlebars-v2.0.0.js"></script>
 <script type="text/javascript" src="js/comments.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
 
 <script>
 
-
+    $(document).ready(function(){
+        commentFunctions.getTemplate();
+    });
 </script>
+
 </body>
 </html>

@@ -87,3 +87,21 @@ border: 1px solid #32A1BD;
     color:#D1D1D1;
     display: inline;
 }
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/*.commentOverlay{*/
+    /*position: ;*/
+/*}*/
+
+.leaveComment{
+    display: none;
+}

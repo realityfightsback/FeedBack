@@ -7,20 +7,67 @@
         button {
             color: red;
         }
+
+        .commentBox {
+            position: absolute;
+            z-index: 100;
+        }
+
+        .commentOverlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            widows: 100%;
+            opacity: .5;
+            background: rgb(255, 255, 255);
+        }
+
+        #slide{
+            display: none;
+        }
     </style>
+    <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
 </head>
 <body>
 
+<div class="comment">Top Level
+    <div class="buttons"></div>
+    <div class="children">
+        <div class="comment"> Sub
+            <div class="buttons"></div>
+            <div class="children">
+                <div class="comment"> SubSub
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam blanditiis consectetur corporis
+    dignissimos eligendi esse ipsa molestiae mollitia non nulla odio optio placeat porro repudiandae sed, tempore. Aut,
+    neque!
+</div>
+<div id="slide">Aut autem beatae deleniti dolor labore necessitatibus quaerat quam quasi quod recusandae? Ad, architecto aspernatur
+    culpa dolorum eos et, facere illo modi officiis omnis reiciendis rem sequi tenetur voluptate voluptates?
+</div>
+<div>Aut corporis ducimus officiis. Dolorum, officia quia! A accusamus autem esse illo nihil obcaecati quam quis sed,
+    voluptas voluptates. Alias, aut dolor eos et facere libero officia sint soluta tenetur.
+</div>
+
+
 <button onclick="gogo(event, this)">Click</button>
-
-
+<input type="text"/>
 </body>
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script>
-    function gogo(event, obj) {
-        var $obj = $(obj);
-        $obj.css("color","green");
-    }
+$('#slide').slideDown();
+
+
+
+
 </script>
 
 </html>
