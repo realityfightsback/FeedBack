@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        button {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="gogo(event, this)">Click</button>
+
+
+</body>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script>
+    function gogo(event, obj) {
+        var $obj = $(obj);
+        $obj.css("color","green");
+    }
+</script>
+
+</html>

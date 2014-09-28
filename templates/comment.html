@@ -1,0 +1,15 @@
+<div class="comment"> <!--Gets minimized class if we click [-] -->
+    <div class="commentHeader">
+        <span class="commentCollapser" onclick="commentFunctions.toggleComment(this)">[-]</span>
+        <span class="commentUserName">{{userName}}</span>
+                <span class="commentScoring">
+                    <span class="glyphicon glyphicon-thumbs-up upVote"></span>
+                    <span class="score">{{score}}</span>
+                    <span class="glyphicon glyphicon-thumbs-down downVote"></span>
+                    <span class="glyphicon glyphicon-edit"></span>
+                </span>
+    </div>
+    <div class="commentBody">{{content}}</div>
+    <div class="commentChildren">
+    </div>
+</div>

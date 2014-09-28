@@ -1,0 +1,89 @@
+/* Minimal css for clickable pure CSS collapsible tree menu */
+/* As specific as possible to prevent interference with other code */
+
+#menutree li {
+    list-style: none;          /* all list item li dots invisible */
+    color: #32A1BD;
+}
+
+li input[type=checkbox] + .menu_label {
+    opacity: 0;             /* checkboxes invisible and use no space */
+}                        /* display: none; is better but fails in ie8 */
+
+li .menu_label {
+    cursor: pointer;        /* cursor changes when you mouse over this class */
+}                         /* could add the many user-select: none; commands here */
+
+li input[type=checkbox] + .menu_label + ol > li
+{
+    display: none;         /* prevents sublists below unchecked labels from displaying */
+}
+
+li input[type=checkbox]:checked + .menu_label + ol > li
+{
+    display: block;         /* display submenu on click */
+}
+
+.commentItem *{
+    list-style: none;
+}
+
+input {
+    /*visibility: hidden;*/
+    background: transparent;
+}
+#drawerHeader ol {
+    /* background: url(../img/toggle-small-expand.png) 40px 5px no-repeat; */
+margin:0px;
+position:relative;
+left:-35px;
+}
+
+/* New CSS for comments*/
+
+#commentSection{
+    margin: 15px;
+}
+
+.comment{
+    color: #D1D1D1;
+border: 1px solid #32A1BD;
+}
+
+.commentCollapser{
+    margin: 5px;
+
+}
+
+.commentUserName{
+    /* padding: 10px; */
+
+    position: relative;
+    top: 1px;
+}
+
+.commentHeader{
+
+}
+.commentBody{
+    margin-top: 4px;
+    margin-left: 20px;
+}
+.commentChildren{
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.comment.minimized .commentChildren{
+    display: none;
+}
+
+.commentScoring{
+    float:right;
+    margin-right: 23px;
+}
+
+.comment .glyphicon {
+    color:#D1D1D1;
+    display: inline;
+}

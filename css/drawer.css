@@ -1,0 +1,118 @@
+#drawer {
+    position: fixed;
+    bottom: 40px;
+    height: 140px; /*temp should be 14*/
+    width: 100%;
+    /* padding: 0px; */
+    margin: 0px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4D4C4C), to(#9E9797));
+    overflow-y: auto;
+    /* overflow: auto; */
+    /* padding-right: 15px; */
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#grip {
+    /*height: 10px;*/
+    /*width: 100%;*/
+    /*border: 1px solid #444444;*/
+    /*background: #737373;*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#5CA5DF));
+
+}
+
+#grip div {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: row-resize;
+    display: block;
+    height: 15px;
+    text-decoration: none solid rgb(255, 255, 255);
+    width: 100%;
+    perspective-origin: 620.5px 7.5px;
+    transform-origin: 620.5px 7.5px;
+    background: rgba(0, 0, 0, 0) url(http://assets.codepen.io/images/editor/handle-vert.png) no-repeat scroll 50% 50% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal 12px/18px 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#footer {
+    background: linear-gradient(#505050, #383838);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+#footer .footerButton {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 22px;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    perspective-origin: 24px 11px;
+    transform-origin: 24px 11px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#42586B), to(#5CA5DF));
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px 5px 5px 5px;
+    font: normal normal normal 10px/13.4399995803833px 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 3px 8px;
+    margin: 7px;
+    margin-left: 100px;
+}
+
+.glyphicon{
+    color: #5CA5DF;
+    margin-left: 5%;
+    padding-top: 10px;
+}
+
+#glyphArea{
+    width: 80%;
+    margin-left: 10%;
+    display: inline;
+}
+#glyphArea button{
+    background: transparent;
+    border: none;
+}
+
+    #drawerHeader ol li{
+list-style:none;
+    display:inline-block;
+
+    margin-left: 7px;
+
+    border: 2px rgb(114, 114, 167) solid;
+    border-radius: 6px;
+    padding: 2px;
+    margin-top: 4px;
+    font-family: initial;
+    font-size: smaller;
+    color: rgb(216, 222, 241);
+    
+background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#5CA5DF));
+    height: 21px;
+    box-shadow: 0px 1px 2px grey;
+}
+
+
+#drawerBody{
+    border: 1px solid black;
+
+    margin: 5px;
+}

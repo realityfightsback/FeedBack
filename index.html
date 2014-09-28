@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/vendor/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/comments.css">
+    <link rel="stylesheet" href="css/vendor/jquery-ui.css">
+    <link rel="stylesheet" href="css/vendor/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/vendor/jquery-ui.theme.css">
+</head>
+<body>
+
+<div id="drawer">
+    <div id="grip">
+        <div></div>
+    </div>
+
+    <div id="drawerHeader">
+        <nav>
+            <ol>
+                <li>Comments</li>
+                <li>Statistics</li>
+                <li>Author</li>
+            </ol>
+        </nav>
+    </div>
+    <div id="drawerBody">
+        <div id="commentSection">
+            <button onclick="commentFunctions.getTemplate()">click</button>
+        </div>
+        <div id="statsSection">
+            Stats
+        </div>
+        <div id="authorSection">
+            Author
+        </div>
+
+
+    </div>
+</div>
+<div id="footer">
+    <div class="footerButton">ThisGuy</div>
+    <div id="glyphArea">
+        <button onclick="fetchDefinition()">
+            <!-- Grabs focus if this is not a button, preventing grabbing word to define -->
+            <span class="glyphicon glyphicon-book"></span>
+        </button>
+        <!--<span class="glyphicon glyphicon-headphones"></span>-->
+        <!--<span class="glyphicon glyphicon-play"></span>-->
+        <!--<span class="glyphicon glyphicon-play-circle"></span>-->
+        <!--<span class="glyphicon glyphicon-stats"></span>-->
+        <!--<span class="glyphicon glyphicon-repeat"></span>-->
+        <span class="glyphicon glyphicon-thumbs-up"></span>
+        <span class="glyphicon glyphicon-thumbs-down"></span>
+        <span class="glyphicon glyphicon-bookmark"></span>
+        <span class="glyphicon glyphicon-edit"></span>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="js/vendor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/drawer.js"></script>
+<script type="text/javascript" src="js/vendor/jquery-ui.js"></script>
+<script type="text/javascript" src="js/sampleJSON/getComments.js"></script>
+<script type="text/javascript" src="js/vendor/handlebars-v2.0.0.js"></script>
+<script type="text/javascript" src="js/comments.js"></script>
+
+<script>
+
+
+</script>
+</body>
+</html>
