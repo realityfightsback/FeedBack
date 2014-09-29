@@ -62,6 +62,23 @@ var commentFunctions = (function () {
         ]
     };
 
+    function updateScore(event, isUpVote) {
+        var $score = $(event.target).siblings('.score');
+
+        var score = parseInt($score.text());
+
+        if(isUpVote){
+            score++;
+        }
+        else{
+            score--;
+        }
+
+        $score.text(score);
+
+
+    }
+
     var hBarsTemplate;
 
     return{
@@ -145,7 +162,21 @@ var commentFunctions = (function () {
         slideCommentBox: function (event) {
             $(event.target).closest('.comment').find(' > .commentChildren > .comment.leaveComment').slideDown();
 
+        },
+
+        thumbsUp: function (event) {
+            updateScore(event, true);
+
+            //Need to record and prevent multiple votes, immediately reflect on change, then go backend and make sure.
+        },
+
+        thumbsDown: function (event) {
+            updateScore(event, false);
+
+            //Need to record and prevent multiple votes, immediately reflect on change, then go backend and make sure.
         }
+
+
 
     };
 

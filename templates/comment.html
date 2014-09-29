@@ -3,9 +3,9 @@
         <span class="commentCollapser" onclick="commentFunctions.toggleComment(this)">[-]</span>
         <span class="commentUserName">{{userName}}</span>
                 <span class="commentScoring">
-                    <span class="glyphicon glyphicon-thumbs-up upVote"></span>
+                    <span class="glyphicon glyphicon-thumbs-up upVote" onclick="commentFunctions.thumbsUp(event)"></span>
                     <span class="score">{{score}}</span>
-                    <span class="glyphicon glyphicon-thumbs-down downVote"></span>
+                    <span class="glyphicon glyphicon-thumbs-down downVote" onclick="commentFunctions.thumbsDown(event)"></span>
                     <span class="glyphicon glyphicon-edit" onclick="commentFunctions.slideCommentBox(event)"></span>
                 </span>
     </div>

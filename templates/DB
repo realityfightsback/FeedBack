@@ -1,0 +1,25 @@
+CREATE TABLE comments(
+
+id BIGINT,
+parentId BIGINT,
+    articleHash VARCHAR,
+userID BIGINT,
+content VARCHAR,
+
+);
+
+CREATE TABLE articles(
+    hash VARCHAR,
+    url VARCHAR,
+    vocabRating int,
+    rating int,
+    author BIGINT
+)
+
+CREATE TABLE users(
+    id BIGINT,
+    fName VARCHAR,
+    lName VARCHAR,
+    email VARCHAR,
+    hashedPass VARCHAR
+)
