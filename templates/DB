@@ -1,25 +1,48 @@
+//HyperSQL Definitions
 CREATE TABLE comments(
-
-id BIGINT,
-parentId BIGINT,
-    articleHash VARCHAR,
-userID BIGINT,
-content VARCHAR,
-
+    id BIGINT,
+    parentId BIGINT,
+    articleHash VARCHAR(50),
+    userID BIGINT,
+    content VARCHAR(2000)
 );
 
 CREATE TABLE articles(
-    hash VARCHAR,
-    url VARCHAR,
+    hash VARCHAR(50),
+    url VARCHAR(50),
     vocabRating int,
     rating int,
     author BIGINT
-)
+);
 
 CREATE TABLE users(
     id BIGINT,
-    fName VARCHAR,
-    lName VARCHAR,
-    email VARCHAR,
-    hashedPass VARCHAR
+    fName VARCHAR(20),
+    lName VARCHAR(20),
+    email VARCHAR(40),
+    hashedPass VARCHAR(30)
+);
+
+
+//MySQL Definitions
+
+CREATE TABLE `articles` (
+	`URL` CHAR(100) NOT NULL,
+	`UUID` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	UNIQUE INDEX `URL` (`URL`),
+	INDEX `UUID` (`UUID`)
 )
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=9;
+
+CREATE TABLE `votes` (
+	`ArticleID` BIGINT(20) NOT NULL,
+	`UserID` INT(11) NOT NULL,
+	`UpVote` BIT(1) NOT NULL,
+	`DownVote` BIT(1) NOT NULL,
+	`Date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`ArticleID`, `UserID`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB;
